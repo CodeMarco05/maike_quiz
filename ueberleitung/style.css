@@ -1,0 +1,37 @@
+h1{
+    margin-top: 40px;
+    font-size: 33px;
+    font-weight: 4000;
+    font-family: "Itim", cursive;
+}
+
+body{
+    height: 100vh;
+    background-color: #194e80;
+}
+
+.button{
+    font-size: 23px;
+    font-family: "Itim", cursive;
+    border: 2px solid black;
+    width: 50%;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.zurueck{
+    font-size: 15px;
+    font-family: "Itim", cursive;
+    border: 2px solid black;
+    width: 30%;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.abstand{
+    height: 80px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Wählen</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Hier kann ich die oberste Leiste ändern -->
+    <meta name="theme-color" content="#194e80">
+</head>
+
+<body>
+
+    <center>
+        <h1>Wähle dein Quiz</h1>
+        <div class="button" onclick="quiz1()">Allgemeinwissen</div>
+        <div class="button" onclick="quiz2()">Quiz 2</div>
+        <div class="button" onclick="quiz3()">Quiz 3</div>
+        <div class="button" onclick="quiz4()">Quiz 4</div>
+        <div class="abstand"> </div>
+    </center>
+    <div class="zurueck" onclick="zurueck()">Zur Startseite</div>
+    <script>
+        function quiz1() {
+            window.location.href = "../quiz1/frage1/index.html"
+            setzeRichtigeFragen()
+        }
+
+        function quiz2() {
+            window.location.href = "../quiz2/frage1/index.html"
+            setzeRichtigeFragen()
+        }
+
+        function quiz3() {
+            window.location.href = "../quiz3/frage1/index.html"
+            setzeRichtigeFragen()
+        }
+
+        function quiz4() {
+            window.location.href = "../quiz4/frage1/index.html"
+            setzeRichtigeFragen()
+        }
+        
+        function zurueck() {
+            window.location.href = "../index.html"
+            setzeRichtigeFragen()
+        }
+
+        function setzeRichtigeFragen(){
+            localStorage.setItem('rightQuestions', 0)
+        }
+
+
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</body>
+
+
+
+</body>
+
+</html>

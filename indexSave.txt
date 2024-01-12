@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content=""width=device-width, initial-scale="1.0">
+    <title>
+        Quiz App
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Starten vom Quiz-->
+    <div class="start_btn"> <button> Starte das Quiz</button> </div>
+
+    <!-- Info Box-->
+    <div class="info_box">
+        <div class="info_title">
+            <span> Hier die Regeln für das Quiz </span>
+        </div>
+        <div class="info_list">
+            <div class="info"> 1. Du hast nur <span> 20 sec.</span> für jede Frage. </div>
+            <div class="info"> 2. Du kannst deine Antowrt nicht mehr abändern. </div>
+            <div class="info"> 3. Wenn die Zeit um ist, kannst du nichts mehr wählen. </div>
+            <div class="info"> 4. Du kannst nicht aus dem Quiz gehen, während du spielst. </div>
+            <div class="info"> 5. Am Ende wird dir gesagt, wie viele du richtig hattest. </div>
+        </div>
+        <dic class="buttons">
+            <button class="zurück"> Zurück zum Start </button>
+            <button class="start"> Start </button>
+        </dic>
+    </div>
+</body>
+
+</html>
