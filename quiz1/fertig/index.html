@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Fertig</title>
+</head>
+<body>
+    <center>
+        <h1>Du hast es soweit Geschafft</h1>
+        <h2 id="score"></h2>
+
+        <div id="back" onclick="back()">Zur Startseite</div>
+
+        <img src="../../images/meme.gif" alt="gif" id="gif">
+    </center>
+
+    <script>
+        window.onload = function(){
+            let score = localStorage.getItem('rightQuestions')
+            document.getElementById('score').textContent = `Dein Score ist ${score} Frage/-n richtig.`
+        }
+
+        function back(){
+            window.location.href = '../../index.html'
+        }
+
+
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
+</body>
+</html>

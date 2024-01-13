@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frage 5</title>
+    <link rel="stylesheet" href="../style.css">
+    <meta name="theme-color" content="#194e80">
 </head>
+
 <body>
-    
+
+    <center>
+        <h1>Frage 5</h1>
+
+        <h2>Welches Land wird auch als das "Land der aufgehenden Sonne" bezeichnet</h2>
+
+        <div class="options_div">
+            <div class="option">a) China</div>
+            <div class="option">b) Südkorea</div>
+            <div class="option">c) Thailand</div>
+            <div class="option">d) Japan</div>
+        </div>
+
+        <div class="button_div">
+            <div class="row">
+                <div class="button_right_top" id="firstButton" onclick="option(1)">a</div>
+                <div class="button_left_top" id="secondButton" onclick="option(2)">b</div>
+            </div>
+            <div class="row">
+                <div class="button_right_bottom" id="thirdButton" onclick="option(3)">c</div>
+                <div class="button_left_bottom" id="fourthButton" onclick="option(4)">d</div>
+            </div>
+        </div>
+
+        <div class="commit" onclick="commit()">weiter</div>
+
+    </center>
+
+    <script>
+
+        let selectedOption = 0
+
+        function commit(){
+            if(selectedOption == 4){
+                let storedValue = localStorage.getItem('rightQuestions')
+                let points = parseInt(storedValue, 10)
+                points = points + 1
+
+                localStorage.setItem('rightQuestions', points)
+
+                window.location.href = '../fertig/index.html'
+            }else if(selectedOption != 0 && selectedOption != 4){
+                window.location.href = '../fertig/index.html'
+            }else{
+                alert("Nichts ausgewählt. 😉")
+            }
+        }
+
+        function option(number){
+            selectedOption = number
+            if(number == 1){
+                document.getElementById("firstButton").style.backgroundColor = '#7c90a3';
+                document.getElementById("secondButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("thirdButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("fourthButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+            }else if(number == 2){
+                document.getElementById("firstButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("secondButton").style.backgroundColor = '#7c90a3';
+                document.getElementById("thirdButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("fourthButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+            }else if(number == 3){
+                document.getElementById("firstButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("secondButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("thirdButton").style.backgroundColor = '#7c90a3';
+                document.getElementById("fourthButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+            }else{
+                document.getElementById("firstButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("secondButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("thirdButton").style.backgroundColor = 'rgba(255,255,255,0.5)';
+                document.getElementById("fourthButton").style.backgroundColor = '#7c90a3';
+            }
+        }
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
 </body>
+
 </html>
