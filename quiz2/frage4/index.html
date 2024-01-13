@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frage 1</title>
+    <title>Frage 4</title>
     <link rel="stylesheet" href="../style.css">
     <meta name="theme-color" content="#194e80">
 </head>
@@ -12,15 +12,15 @@
 <body>
 
     <center>
-        <h1>Frage 1</h1>
+        <h1>Frage 4</h1>
 
-        <h2>Welches der folgenden Länder hat die größte Wirtschaft nach dem Bruttoinlandsprodukt (BIP)?</h2>
+        <h2>Welche Sängerin ist bekannt für Hits wie "Hello" oder "Rolling in the Deep"?</h2>
 
         <div class="options_div">
-            <div class="option">a) China</div>
-            <div class="option">b) Deutschland</div>
-            <div class="option">c) USA</div>
-            <div class="option">d) Indien</div>
+            <div class="option">a) Lady Gaga</div>
+            <div class="option">b) Adele</div>
+            <div class="option">c) Beyoncé</div>
+            <div class="option">d) Rihanna</div>
         </div>
 
         <div class="button_div">
@@ -43,16 +43,16 @@
         let selectedOption = 0
 
         function commit(){
-            if(selectedOption == 3){
+            if(selectedOption == 2){
                 let storedValue = localStorage.getItem('rightQuestions')
                 let points = parseInt(storedValue, 10)
                 points = points + 1
 
                 localStorage.setItem('rightQuestions', points)
 
-                window.location.href = '../frage2/index.html'
-            }else if(selectedOption != 0 && selectedOption != 3){
-                window.location.href = '../frage2/index.html'
+                window.location.href = '../frage5/index.html'
+            }else if(selectedOption != 0 && selectedOption != 2){
+                window.location.href = '../frage5/index.html'
             }else{
                 alert("Nichts ausgewählt. 😉")
             }
